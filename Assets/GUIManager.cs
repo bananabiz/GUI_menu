@@ -10,15 +10,18 @@ public class GUIManager : MonoBehaviour
     #region Variables
     //public bool gameScene, showOptions, pause;
     //public GameObject menu, options;
-    public Slider volumeSlider;
-    public Scrollbar brightnessSlider;
-    public AudioSource music;
-    public Light dirLight;
 
     [Header("Bools")]
     public bool gameScene;
     public bool showOptions;
     public bool pause;
+    public bool fullScreenToggle;
+
+    [Header("Resolutions")]
+    public int index;
+    public int[] resX, resY;
+    public Dropdown resolutionDropdown;
+    //Dropdown has a value variable that you can use to reference arrays
 
     [Header("Keys")]
     public KeyCode forward;
@@ -43,14 +46,26 @@ public class GUIManager : MonoBehaviour
     public Text sprintText;
     public Text interactText;
 
-    [Header("References")]
+    [Header("GUI Elements")]
     public GameObject menu;
     public GameObject options;
+    public Toggle fullWindowToggle;
+
+    [Header("References")]
+    public Slider volumeSlider;
+    public Scrollbar brightnessScrollbar;
+    public AudioSource music;
+    public bool ismute;
+    public Light dirLight;
 
     #endregion
 
     void Start()
     {
+        Time.timeScale = 1;
+        #region MainMenu
+        fullScreenToggle = true; //change when you load in the info
+        
         if (PlayerPrefs.HasKey("Volume"))
         {
             Load();
@@ -59,12 +74,19 @@ public class GUIManager : MonoBehaviour
         {
             volumeSlider.value = music.volume;
         }
-        if (brightnessSlider != null && dirLight != null)
+        if (brightnessScrollbar != null && dirLight != null)
         {
-            brightnessSlider.value = dirLight.intensity;
-
+            brightnessScrollbar.value = dirLight.intensity;
         }
 
+        #region PauseMenu
+        if (gameScene)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        #endregion
+        #endregion
         #region SetUp Keys
         //Set out keys to the preset keys we may have saved, else set keys to default
         forward = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Forward", "W"));
@@ -95,16 +117,16 @@ public class GUIManager : MonoBehaviour
             // Debug.Log("1");
             if (music.volume != volumeSlider.value)
             {
-                //    Debug.Log("2");
+                // Debug.Log("2");
                 music.volume = volumeSlider.value;
             }
         }
-        if (brightnessSlider != null && dirLight != null)
+        if (brightnessScrollbar != null && dirLight != null)
 
         {
-            if (brightnessSlider.value != dirLight.intensity)
+            if (brightnessScrollbar.value != dirLight.intensity)
             {
-                dirLight.intensity = brightnessSlider.value;
+                dirLight.intensity = brightnessScrollbar.value;
             }
         }
         if (gameScene)
@@ -167,17 +189,29 @@ public class GUIManager : MonoBehaviour
     public void Default()
     {
         volumeSlider.value = 1;
-        brightnessSlider.value = 1;
+        brightnessScrollbar.value = 1;
         PlayerPrefs.SetFloat("Volume", 1);
         PlayerPrefs.SetFloat("Brightness", 1);
-        
+
     }
     public bool TogglePause()
     {
         if (pause)
         {
-            Time.timeScale = 1;
-            pause = false;
+            if (!showOptions)
+            {
+                Time.timeScale = 1;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                menu.SetActive(false);
+                pause = false;
+            }
+            else
+            {
+                showOptions = false;
+                options.SetActive(false);
+                menu.SetActive(true);
+            }
             return false;
         }
         else
@@ -189,8 +223,14 @@ public class GUIManager : MonoBehaviour
 
     }
 
+    public void Mute()
+    {
+        ismute = !ismute;
+        AudioListener.volume = ismute ? 0 : 1;
+    }
+
     #region Key Press Event
-    void OnGUI() 
+    void OnGUI()
     {
         Event e = Event.current;
         //if forward is set to none
@@ -379,7 +419,7 @@ public class GUIManager : MonoBehaviour
     {
         //if none of the other keys are blank
         //then we can edit this key
-        if (!(backward == KeyCode.None || left == KeyCode.None || right == KeyCode.None || jump == KeyCode.None || crouch == KeyCode.None || sprint == KeyCode.None || interact == KeyCode.None ))
+        if (!(backward == KeyCode.None || left == KeyCode.None || right == KeyCode.None || jump == KeyCode.None || crouch == KeyCode.None || sprint == KeyCode.None || interact == KeyCode.None))
         {
             //set out holding key to the key of this button
             holdingKey = forward;
@@ -495,19 +535,53 @@ public class GUIManager : MonoBehaviour
         }
     }
 
-    #endregion 
+    #endregion
 
-    /*
-    RESOLUTIONS
+    #region FullScreen Toggle and Resolution
+    public void FullScreenToggle()
+    {
+        fullScreenToggle = !fullScreenToggle;
+        Screen.fullScreen = !Screen.fullScreen;
+    }
+
+    public void Setsolution()
+    {
+        index = resolutionDropdown.value;
+        Screen.SetResolution(resX[index], resY[index], fullScreenToggle);
+    }
+
+    /* RESOLUTIONS
     3840 * 2160 
     2560 * 1440
     1920 * 1080
-    1680 * 960
     1600 * 900
     1280 * 720
-    1152 * 648
     1024 * 576
-
+    640 * 480
     Screen.SetResolution(x,y,fullscreen(bool));
     */
+    #endregion
+
 }
+/* Homework 20170818
+Save, Load and set up all option menu data between both scenes
+- volume
+- mute
+- brightness
+- keybinding
+- fullscreen
+- relolutions
+
+Pause Menu
+- Toggle on an off correctly
+- Cursor visibility and lock toggling
+- Return button returns to game
+    
+All buttons on both scenes linking correctly
+
+Code comments
+
+    Bonus Tasks
+    - Carry over music from game scene
+    - make sure music doesn't duplicate
+*/
