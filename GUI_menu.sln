@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_menu", "GUI_menu.csproj", "{9C40A60D-1D0B-CD3D-CD9C-D35676608A5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_menu.CSharp", "GUI_menu.CSharp.csproj", "{934F116A-79A7-2AF9-7EFF-B6990ADDB10C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C40A60D-1D0B-CD3D-CD9C-D35676608A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C40A60D-1D0B-CD3D-CD9C-D35676608A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C40A60D-1D0B-CD3D-CD9C-D35676608A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C40A60D-1D0B-CD3D-CD9C-D35676608A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{934F116A-79A7-2AF9-7EFF-B6990ADDB10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{934F116A-79A7-2AF9-7EFF-B6990ADDB10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{934F116A-79A7-2AF9-7EFF-B6990ADDB10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{934F116A-79A7-2AF9-7EFF-B6990ADDB10C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

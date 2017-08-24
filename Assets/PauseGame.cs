@@ -26,4 +26,15 @@ public class PauseGame : MonoBehaviour {
             }
         }
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void Resume()
+    {
+        canvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
 }

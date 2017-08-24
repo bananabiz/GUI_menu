@@ -185,6 +185,15 @@ public class GUIManager : MonoBehaviour
     {
         music.volume = PlayerPrefs.GetFloat("Volume");
         dirLight.intensity = PlayerPrefs.GetFloat("Brightness");
+
+        forwardText.text = PlayerPrefs.GetString("Forward");
+        backwardText.text = PlayerPrefs.GetString("Backward");
+        leftText.text = PlayerPrefs.GetString("Left");
+        rightText.text = PlayerPrefs.GetString("Right");
+        jumpText.text = PlayerPrefs.GetString("Jump");
+        crouchText.text = PlayerPrefs.GetString("Crouch");
+        sprintText.text = PlayerPrefs.GetString("Sprint");
+        interactText.text = PlayerPrefs.GetString("Interact");
     }
     public void Default()
     {
