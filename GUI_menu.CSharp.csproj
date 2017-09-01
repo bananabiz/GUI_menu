@@ -89,6 +89,8 @@
     <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
     <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
     <Compile Include="Assets\Scripts\TiltWindow.cs" />
+    <Compile Include="Assets\TimerClockCanvas.cs" />
+    <Compile Include="Assets\TimerClockHardCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
