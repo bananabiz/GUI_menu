@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class GUIManager : MonoBehaviour
 {
 
@@ -16,6 +17,7 @@ public class GUIManager : MonoBehaviour
     public bool showOptions;
     public bool pause;
     public bool fullScreenToggle;
+    public bool ismute;
 
     [Header("Resolutions")]
     public int index;
@@ -55,7 +57,6 @@ public class GUIManager : MonoBehaviour
     public Slider volumeSlider;
     public Scrollbar brightnessScrollbar;
     public AudioSource music;
-    public bool ismute;
     public Light dirLight;
 
     #endregion
@@ -63,6 +64,7 @@ public class GUIManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+
         #region MainMenu
         fullScreenToggle = true; //change when you load in the info
         
@@ -572,6 +574,7 @@ public class GUIManager : MonoBehaviour
     #endregion
 
 }
+
 /* Homework 20170818
 Save, Load and set up all option menu data between both scenes
 - volume

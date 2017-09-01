@@ -1,18 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PauseGame : MonoBehaviour {
+public class PauseGame : MonoBehaviour
+{
     public Transform canvas;
 
-	// Use this for initialization
-	void Start () {
+    //private GUIManager Settings;
+
+    //public GameObject options = GetComponent(Options.prefab);
+
+    void Start () {
        
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause();
+        }
+    }
+        public void Pause()
         {
             if (canvas.gameObject.activeInHierarchy == false)
             {
@@ -25,16 +36,22 @@ public class PauseGame : MonoBehaviour {
                 Time.timeScale = 1;
             }
         }
-    }
 
     public void Quit()
     {
         Application.Quit();
     }
 
-    public void Resume()
+    public void Restart()
     {
-        canvas.gameObject.SetActive(false);
-        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+        
     }
+    public void ShowOptions()
+    {
+        //Settings = new GUIManager();
+        //Settings.ShowOptions();
+        //options.SetActive(true);
+    }
+
 }
