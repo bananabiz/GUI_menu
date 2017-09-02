@@ -1,0 +1,47 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     880 MB
+    Driver:   10.18.10.4425
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.070 seconds
+Platform assembly: D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Unity Projects\GUI_menu\Build&Run\GUI_test_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 59Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.403234 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2130 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.247710 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 366.
+Total: 4.665069 ms (FindLiveObjects: 0.038771 ms CreateObjectMapping: 0.025087 ms MarkObjects: 0.404815 ms  DeleteObjects: 4.195255 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.732658 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 670.
+Total: 0.840419 ms (FindLiveObjects: 0.050174 ms CreateObjectMapping: 0.035920 ms MarkObjects: 0.686475 ms  DeleteObjects: 0.067279 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.062212 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 367.
+Total: 4.464942 ms (FindLiveObjects: 0.041051 ms CreateObjectMapping: 0.029648 ms MarkObjects: 0.456129 ms  DeleteObjects: 3.937542 ms)
+
