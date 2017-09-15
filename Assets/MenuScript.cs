@@ -37,6 +37,9 @@ public class MenuScript : MonoBehaviour {
     public Light dirLight;
     public float brightnessSlider;
 
+    public GUISkin guiSkin;
+    public GUIStyle guiStyle;
+
     #endregion
 
     // Use this for initialization
@@ -86,7 +89,9 @@ public class MenuScript : MonoBehaviour {
     {
         if (!showOptions) //if we're on our Main Menu and not our Options Menu
         {
-            GUI.Box(new Rect(0, 0, Screen.width, Screen.height),""); //background size, use the exact size
+            GUI.Box(new Rect(0, 0, Screen.width, Screen.height),"", guiStyle); //background size, use the exact size
+            GUI.skin = guiSkin;
+
             GUI.Box(new Rect(4 * scrW, 0.25f * scrH, 8 * scrW, 2 * scrH), "Eric's Awesome World");
             //Buttons
             if (GUI.Button(new Rect(6 * scrW, 4 * scrH, 4 * scrW, scrH), "Play"))
