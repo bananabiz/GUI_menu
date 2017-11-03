@@ -93,28 +93,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CustomisationSet.cs" />
-    <Compile Include="Assets\GUIManager.cs" />
-    <Compile Include="Assets\MenuScript.cs" />
-    <Compile Include="Assets\PauseGame.cs" />
-    <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
-    <Compile Include="Assets\Scripts\ApplicationManager.cs" />
-    <Compile Include="Assets\Scripts\ChangeColor.cs" />
-    <Compile Include="Assets\Scripts\DragMe.cs" />
-    <Compile Include="Assets\Scripts\DragPanel.cs" />
-    <Compile Include="Assets\Scripts\DropMe.cs" />
-    <Compile Include="Assets\Scripts\PanelManager.cs" />
-    <Compile Include="Assets\Scripts\ResizePanel.cs" />
-    <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
-    <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
-    <Compile Include="Assets\Scripts\TiltWindow.cs" />
-    <Compile Include="Assets\TimerClockCanvas.cs" />
-    <Compile Include="Assets\TimerClockHardCode.cs" />
+    <Compile Include="Assets\Scripts\CharacterHandler.cs" />
+    <Compile Include="Assets\Scripts\CheckPoint.cs" />
+    <Compile Include="Assets\Scripts\CustomisationGet.cs" />
+    <Compile Include="Assets\Scripts\CustomisationSet.cs" />
+    <Compile Include="Assets\Scripts\GUIManager.cs" />
+    <Compile Include="Assets\Scripts\MenuScript.cs" />
+    <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\Movement.cs" />
+    <Compile Include="Assets\Scripts\PauseGame.cs" />
+    <Compile Include="Assets\Scripts\PickUp.cs" />
+    <Compile Include="Assets\Scripts\TimerClockCanvas.cs" />
+    <Compile Include="Assets\Scripts\TimerClockHardCode.cs" />
+    <Compile Include="Assets\Scripts\other scripts\ActiveStateToggler.cs" />
+    <Compile Include="Assets\Scripts\other scripts\ApplicationManager.cs" />
+    <Compile Include="Assets\Scripts\other scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Scripts\other scripts\DragMe.cs" />
+    <Compile Include="Assets\Scripts\other scripts\DragPanel.cs" />
+    <Compile Include="Assets\Scripts\other scripts\DropMe.cs" />
+    <Compile Include="Assets\Scripts\other scripts\PanelManager.cs" />
+    <Compile Include="Assets\Scripts\other scripts\ResizePanel.cs" />
+    <Compile Include="Assets\Scripts\other scripts\ScrollDetailTexture.cs" />
+    <Compile Include="Assets\Scripts\other scripts\ShowSliderValue.cs" />
+    <Compile Include="Assets\Scripts\other scripts\TiltWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
     <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
-    <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+    <None Include="Assets\Other Textures and Sprites\SF UI\Background\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
