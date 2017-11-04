@@ -42,7 +42,7 @@ public class ItemGen : MonoBehaviour
 
             case 2:
                 name = "Meat";
-                value = 5;
+                value = 10;
                 description = "Retore half quarter of HP";
                 icon = "Meat";
                 mesh = "Meat";
@@ -55,7 +55,7 @@ public class ItemGen : MonoBehaviour
             #region Weapon 100-199
             case 100:
                 name = "Axe";
-                value = 5;
+                value = 8;
                 description = "Iron Axe";
                 icon = "Axe";
                 mesh = "Axe";
@@ -64,7 +64,7 @@ public class ItemGen : MonoBehaviour
 
             case 101:
                 name = "Bow";
-                value = 7;
+                value = 5;
                 description = "Bamboo Bow";
                 icon = "Bow";
                 mesh = "Bow";
@@ -163,17 +163,8 @@ public class ItemGen : MonoBehaviour
                 mesh = "Belt";
                 type = ItemType.Apparel;
                 break;
-
+                
             case 209:
-                name = "Belt";
-                value = 5;
-                description = "Leather Belt";
-                icon = "Belt";
-                mesh = "Belt";
-                type = ItemType.Apparel;
-                break;
-
-            case 210:
                 name = "Shoulders";
                 value = 5;
                 description = "Leather Shoulders";
@@ -182,7 +173,7 @@ public class ItemGen : MonoBehaviour
                 type = ItemType.Apparel;
                 break;
 
-            case 211:
+            case 210:
                 name = "Shield";
                 value = 5;
                 description = "Wooden Shield";
