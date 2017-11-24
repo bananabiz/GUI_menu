@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 // this script no need to attached to anything, just sit in the files and get references
-public class Item : MonoBehaviour
+public class Item 
 {
     #region Private Variables
     private int _idNum;

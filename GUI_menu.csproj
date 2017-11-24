@@ -98,6 +98,9 @@
     <Compile Include="Assets\Scripts\CustomisationGet.cs" />
     <Compile Include="Assets\Scripts\CustomisationSet.cs" />
     <Compile Include="Assets\Scripts\GUIManager.cs" />
+    <Compile Include="Assets\Scripts\Item\DragAndDropChest.cs" />
+    <Compile Include="Assets\Scripts\Item\DragAndDropInventory.cs" />
+    <Compile Include="Assets\Scripts\Item\Inventory.cs" />
     <Compile Include="Assets\Scripts\Item\Item.cs" />
     <Compile Include="Assets\Scripts\Item\ItemGen.cs" />
     <Compile Include="Assets\Scripts\MenuScript.cs" />
